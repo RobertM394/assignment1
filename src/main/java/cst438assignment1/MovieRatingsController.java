@@ -35,7 +35,7 @@ public class MovieRatingsController {
 	
 	@GetMapping("/movies")
 	public String getAllRatings(Model model) {
-		Iterable<MovieRating> ratings = ratingsRepository.findAll();
+		Iterable<MovieRating> ratings = ratingsRepository.findAllMovieRatingsOrderByTitleDateDesc();
 		model.addAttribute("ratings", ratings);
 		return "ratings_list";
 	}
