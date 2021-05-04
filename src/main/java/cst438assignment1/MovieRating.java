@@ -19,11 +19,11 @@ public class MovieRating {
 	
 	@NotNull
 	@Size(min=3, max=25)
-	private String posterFirstName;
+	private String reviewerFirstName;
 	
 	@NotNull
 	@Size(min=3, max=25)
-	private String posterLastName;
+	private String reviewerLastName;
 	
 	@NotNull
 	@Size(min=3, max=25)
@@ -37,13 +37,14 @@ public class MovieRating {
 	}
 	
 	
-	public MovieRating(long id, String title, String posterFirstName, String posterLastName, String datePosted, int movieRating)
+	public MovieRating(long id, String title, String reviewerFirstName, 
+			String reviewerLastName, String datePosted, int movieRating)
 	{
 		super();
 		this.id = id;
 		this.title = title;
-		this.posterFirstName = posterFirstName;
-		this.posterLastName = posterLastName;
+		this.reviewerFirstName = reviewerFirstName;
+		this.reviewerLastName = reviewerLastName;
 		this.datePosted = new java.util.Date().toString();
 		this.movieRating = movieRating;
 	}
@@ -65,27 +66,27 @@ public class MovieRating {
 	}
 
 
-	public String getPosterFirstName()
+	public String getReviewerFirstName()
 	{
-		return posterFirstName;
+		return reviewerFirstName;
 	}
 
 
-	public void setPosterFirstName(String posterFirstName)
+	public void setReviewerFirstName(String posterFirstName)
 	{
-		this.posterFirstName = posterFirstName;
+		this.reviewerFirstName = posterFirstName;
 	}
 
 
-	public String getPosterLastName()
+	public String getReviewerLastName()
 	{
-		return posterLastName;
+		return reviewerLastName;
 	}
 
 
-	public void setPosterLastName(String posterLastName)
+	public void setReviewerLastName(String posterLastName)
 	{
-		this.posterLastName = posterLastName;
+		this.reviewerLastName = posterLastName;
 	}
 
 
